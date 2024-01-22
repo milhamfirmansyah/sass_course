@@ -10,10 +10,16 @@
   width: 100%;
   margin-left: 8.6%;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     flex-direction: column;
     gap: 4rem;
-    margin-left: 10%;
+    margin-left: 50%;
+  }
+  @include respond(tab-port) {
+    margin-left: 32%;
+  }
+  @include respond(phone) {
+    margin-left: 11%;
   }
 }
 

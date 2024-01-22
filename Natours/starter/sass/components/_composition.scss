@@ -1,22 +1,33 @@
 .composition {
   &-wrapper {
     display: flex;
+    // align-items: center;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       flex-direction: column-reverse;
+      gap: 28rem;
+    }
+    @include respond(tab-port) {
       gap: 22rem;
     }
   }
 
   &-container {
     position: relative;
+    @include respond(tab-land) {
+      left: 30%;
+    }
+    @include respond(tab-port) {
+      left: 10%;
+    }
   }
 
   &-left {
     width: 600px;
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       padding: 0 2rem;
-      width: 450px;
+      width: 90%;
+      margin: auto;
     }
   }
 
@@ -27,6 +38,9 @@
     transition: all 0.2s;
     outline-offset: 2rem;
     position: absolute;
+    @include respond(tab-land) {
+      width: 24rem;
+    }
     @include respond(tab-port) {
       width: 16rem;
     }

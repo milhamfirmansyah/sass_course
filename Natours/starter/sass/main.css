@@ -42,7 +42,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -383,22 +382,38 @@ body {
 .composition-wrapper {
   display: flex;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .composition-wrapper {
     flex-direction: column-reverse;
+    gap: 28rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .composition-wrapper {
     gap: 22rem;
   }
 }
 .composition-container {
   position: relative;
 }
+@media (max-width: 75em) {
+  .composition-container {
+    left: 30%;
+  }
+}
+@media (max-width: 56.25em) {
+  .composition-container {
+    left: 10%;
+  }
+}
 .composition-left {
   width: 600px;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .composition-left {
     padding: 0 2rem;
-    width: 450px;
+    width: 90%;
+    margin: auto;
   }
 }
 .composition-photo {
@@ -408,6 +423,11 @@ body {
   transition: all 0.2s;
   outline-offset: 2rem;
   position: absolute;
+}
+@media (max-width: 75em) {
+  .composition-photo {
+    width: 24rem;
+  }
 }
 @media (max-width: 56.25em) {
   .composition-photo {
@@ -477,7 +497,7 @@ body {
   justify-content: center;
   gap: 4rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .card-wrapper {
     flex-direction: column;
     margin-left: 50%;
@@ -520,11 +540,21 @@ body {
   width: 100%;
   margin-left: 8.6%;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .tours-wrapper {
     flex-direction: column;
     gap: 4rem;
-    margin-left: 10%;
+    margin-left: 50%;
+  }
+}
+@media (max-width: 56.25em) {
+  .tours-wrapper {
+    margin-left: 32%;
+  }
+}
+@media (max-width: 37.5em) {
+  .tours-wrapper {
+    margin-left: 11%;
   }
 }
 
@@ -873,7 +903,7 @@ body {
 }
 @media (max-width: 56.25em) {
   .footer-copyright {
-    padding-left: 2rem;
+    margin: auto;
     text-align: center;
   }
 }
